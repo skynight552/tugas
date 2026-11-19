@@ -1,42 +1,29 @@
 {
   "expo": {
-    "name": "TODOLIST",
-    "slug": "TODOLIST",
+    "name": "BelanjaYuk",
+    "slug": "belanjayuk",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
-    "scheme": "todolist",
-    "userInterfaceStyle": "automatic",
-    "ios": {
-      "icon": "./assets/expo.icon"
-    },
-    "android": {
-      "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/images/android-icon-foreground.png",
-        "backgroundImage": "./assets/images/android-icon-background.png",
-        "monochromeImage": "./assets/images/android-icon-monochrome.png"
-      },
-      "predictiveBackGestureEnabled": false
-    },
-    "web": {
-      "output": "server",
-      "favicon": "./assets/images/favicon.png"
-    },
+    "scheme": "belanjayuk",
+    "userInterfaceStyle": "light",
     "plugins": [
       "expo-router",
       [
-        "expo-splash-screen",
+        "expo-image-picker",
         {
-          "backgroundColor": "#208AEF",
-          "image": "./assets/images/splash-icon.png",
-          "imageWidth": 76
+          "photosPermission": "Aplikasi membutuhkan akses galeri untuk menambahkan foto barang belanja.",
+          "cameraPermission": "Aplikasi membutuhkan akses kamera untuk mengambil foto barang."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Aplikasi menggunakan lokasi untuk mencatat tempat belanja."
         }
       ]
     ],
     "experiments": {
-      "typedRoutes": true,
-      "reactCompiler": true
+      "typedRoutes": true
     }
   }
 }
